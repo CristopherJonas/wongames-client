@@ -43,5 +43,6 @@ export const WithFloatImage: StoryObj = {
 }
 
 WithFloatImage.args = {
-  floatImage: '/img/red-dead-float.png'
+  floatImage: '/img/red-dead-float.png',
+  alignment: 'right'
 }
