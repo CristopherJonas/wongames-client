@@ -1,6 +1,7 @@
 import { screen } from '@testing-library/react'
-import { renderWithTheme } from '../../utils/tests/helpers'
+import { renderWithTheme } from '@/utils/tests/helpers'
 import { AddShoppingCart } from '@styled-icons/material-outlined/AddShoppingCart'
+import { darken } from 'polished'
 
 import Button from '.'
 
@@ -63,6 +64,27 @@ describe('<Button />', () => {
     expect(screen.getByRole('link', { name: /buy now/i })).toHaveAttribute(
       'href',
       '/link'
+    )
+  })
+
+  it('should render a minimal version', () => {
+    renderWithTheme(
+      <Button icon={<AddShoppingCart data-testid="icon" />} minimal>
+        Buy now
+      </Button>
+    )
+
+    expect(screen.getByRole('button', { name: /buy now/i })).toHaveStyle({
+      background: 'none',
+      color: darken(0.1, '#F231A5')
+    })
+
+    expect(screen.getByRole('button', { name: /buy now/i })).toHaveStyleRule(
+      'background',
+      'none',
+      {
+        modifier: ':hover'
+      }
     )
   })
 })

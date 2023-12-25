@@ -1,4 +1,4 @@
-const theme = {
+export default {
   grid: {
     container: '130rem',
     gutter: '3.2rem'
@@ -25,6 +25,7 @@ const theme = {
     primary: '#F231A5',
     secondary: '#3CD3C1',
     mainBg: '#06092B',
+    lightBg: '#F2F2F2',
     white: '#FAFAFA',
     black: '#030517',
     lightGray: '#EAEAEA',
@@ -47,6 +48,4 @@ const theme = {
     modal: 40,
     alwaysOnTop: 50
   }
-}
-
-export default theme
+} as const

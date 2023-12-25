@@ -1,8 +1,8 @@
 import { fireEvent, screen } from '@testing-library/react'
-import { renderWithTheme } from '../../utils/tests/helpers'
+import { renderWithTheme } from '@/utils/tests/helpers'
 
 import GameCard from '.'
-import theme from '../../styles/theme'
+import theme from '@/styles/theme'
 
 const props = {
   title: 'Population Zero',
