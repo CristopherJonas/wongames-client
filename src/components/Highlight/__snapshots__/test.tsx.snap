@@ -90,7 +90,6 @@ exports[`<Highlight /> should render headings and button 1`] = `
 
 <section
   alignment="right"
-  backgroundimage="/img/red-dead-img.jpg"
   class="c0"
 >
   <div

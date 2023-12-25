@@ -164,7 +164,6 @@ exports[`<Footer /> should render 4 columns topics 1`] = `
       <h2
         class="c4 c5"
         color="black"
-        linecolor="secondary"
       >
         Contact us
       </h2>
@@ -180,7 +179,6 @@ exports[`<Footer /> should render 4 columns topics 1`] = `
       <h2
         class="c4 c5"
         color="black"
-        linecolor="secondary"
       >
         Follow us
       </h2>
@@ -223,7 +221,6 @@ exports[`<Footer /> should render 4 columns topics 1`] = `
       <h2
         class="c4 c5"
         color="black"
-        linecolor="secondary"
       >
         Links
       </h2>
@@ -254,7 +251,6 @@ exports[`<Footer /> should render 4 columns topics 1`] = `
       <h2
         class="c4 c5"
         color="black"
-        linecolor="secondary"
       >
         Location
       </h2>

@@ -7,10 +7,10 @@ export default {
 } as Meta
 
 export const Default: StoryObj = () => (
-  <MediaMatch greaterThan="medium">Only on Desktop</MediaMatch>
+  <MediaMatch $greaterThan="medium">Only on Desktop</MediaMatch>
 )
 export const Mobile: StoryObj = () => (
-  <MediaMatch lessThan="medium">Only on Mobile</MediaMatch>
+  <MediaMatch $lessThan="medium">Only on Mobile</MediaMatch>
 )
 
 Default.parameters = {

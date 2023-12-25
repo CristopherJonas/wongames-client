@@ -31,11 +31,14 @@ const wrapperModifiers = {
   `
 }
 
-export const Wrapper = styled.div<LogoProps>`
-  ${({ theme, color, size, hideOnMobile }) => css`
+type WrapperProps = {
+  $hideOnMobile: boolean
+} & LogoProps
+export const Wrapper = styled.div<WrapperProps>`
+  ${({ theme, color, size, $hideOnMobile }) => css`
     color: ${theme.colors[color!]};
 
     ${!!size && wrapperModifiers[size]}
-    ${hideOnMobile && wrapperModifiers.hideOnMobile}
+    ${$hideOnMobile && wrapperModifiers.hideOnMobile}
   `}
 `

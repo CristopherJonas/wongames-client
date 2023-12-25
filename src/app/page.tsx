@@ -1,11 +1,13 @@
-import Logo from '@/components/Logo'
-import Main from '@/components/main'
+'use client'
+import { Container } from '@/components/Container'
+import Footer from '@/components/Footer'
+import Menu from '@/components/Menu'
 
 export default function Home() {
   return (
-    <>
-      <Logo size="large" color="black" hideOnMobile />
-      <Main />
-    </>
+    <Container>
+      <Menu />
+      <Footer />
+    </Container>
   )
 }
