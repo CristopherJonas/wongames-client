@@ -1,51 +1,55 @@
+'use client'
+import { useState } from 'react'
 import Home from '../templates/Home'
+import { useQuery, gql } from '@apollo/client'
 
-export const gamesMock = [
-  {
-    title: 'Population Zero',
-    developer: 'Rockstar Games',
-    img: 'https://source.unsplash.com/user/willianjusten/300x140',
-    price: 'R$ 235,00',
-    promotionalPrice: 'R$ 215,00'
-  },
-  {
-    title: 'Population Zero',
-    developer: 'Rockstar Games',
-    img: 'https://source.unsplash.com/user/willianjusten/300x141',
-    price: 'R$ 235,00',
-    promotionalPrice: 'R$ 215,00'
-  },
-  {
-    title: 'Population Zero',
-    developer: 'Rockstar Games',
-    img: 'https://source.unsplash.com/user/willianjusten/300x142',
-    price: 'R$ 235,00',
-    promotionalPrice: 'R$ 215,00'
-  },
-  {
-    title: 'Population Zero',
-    developer: 'Rockstar Games',
-    img: 'https://source.unsplash.com/user/willianjusten/300x143',
-    price: 'R$ 235,00',
-    promotionalPrice: 'R$ 215,00'
-  },
-  {
-    title: 'Population Zero',
-    developer: 'Rockstar Games',
-    img: 'https://source.unsplash.com/user/willianjusten/300x144',
-    price: 'R$ 235,00',
-    promotionalPrice: 'R$ 215,00'
-  },
-  {
-    title: 'Population Zero',
-    developer: 'Rockstar Games',
-    img: 'https://source.unsplash.com/user/willianjusten/300x145',
-    price: 'R$ 235,00',
-    promotionalPrice: 'R$ 215,00'
+const GET_GAMES = gql`
+  query GetGames {
+    games {
+      data {
+        attributes {
+          cover {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
+          name
+          slug
+          price
+          developers {
+            data {
+              attributes {
+                name
+              }
+            }
+          }
+        }
+      }
+    }
   }
-]
+`
 
 export default function Main() {
+  const { loading, error, data } = useQuery(GET_GAMES)
+  const [games, setGames] = useState([])
+
+  if (loading) return <p>LOADING ...</p>
+  if (error) return <p>{JSON.stringify(error)}</p>
+  if (!data) return
+  if (data.games.data.length > 0 && games.length === 0) {
+    const test = data.games.data.map((game) => ({
+      title: game.attributes.name,
+      developer: game.attributes.developers.data[0].attributes.name,
+      img: game.attributes.cover.data.attributes.url,
+      price: game.attributes.price,
+      promotionalPrice: 'R$ 215,00'
+    }))
+
+    setGames(test)
+  }
+
   return (
     <Home
       banners={[
@@ -72,7 +76,7 @@ export default function Main() {
           buttonLink: '/games/defy-death'
         }
       ]}
-      newGames={gamesMock}
+      newGames={games}
       mostPopularHighlight={{
         title: 'Read Dead is back!',
         subtitle: 'Come see John’s new adventures',
@@ -80,8 +84,8 @@ export default function Main() {
         buttonLabel: 'Buy now',
         buttonLink: '/games/rdr2'
       }}
-      mostPopularGames={gamesMock}
-      upcommingGames={gamesMock}
+      mostPopularGames={games}
+      upcommingGames={games}
       upcommingHighlight={{
         title: 'Read Dead is back!',
         subtitle: 'Come see John’s new adventures',
@@ -89,8 +93,8 @@ export default function Main() {
         buttonLabel: 'Buy now',
         buttonLink: '/games/rdr2'
       }}
-      upcommingMoreGames={gamesMock}
-      freeGames={gamesMock}
+      upcommingMoreGames={games}
+      freeGames={games}
       freeHighlight={{
         title: 'Read Dead is back!',
         subtitle: 'Come see John’s new adventures',

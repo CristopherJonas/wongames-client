@@ -2,7 +2,50 @@ import { screen } from '@testing-library/react'
 import { renderWithTheme } from '@/utils/tests/helpers'
 
 import Home from '.'
-import { gamesMock } from '@/app/page'
+const gamesMock = [
+  {
+    title: 'Population Zero',
+    developer: 'Rockstar Games',
+    img: 'https://source.unsplash.com/user/willianjusten/300x140',
+    price: 'R$ 235,00',
+    promotionalPrice: 'R$ 215,00'
+  },
+  {
+    title: 'Population Zero',
+    developer: 'Rockstar Games',
+    img: 'https://source.unsplash.com/user/willianjusten/300x141',
+    price: 'R$ 235,00',
+    promotionalPrice: 'R$ 215,00'
+  },
+  {
+    title: 'Population Zero',
+    developer: 'Rockstar Games',
+    img: 'https://source.unsplash.com/user/willianjusten/300x142',
+    price: 'R$ 235,00',
+    promotionalPrice: 'R$ 215,00'
+  },
+  {
+    title: 'Population Zero',
+    developer: 'Rockstar Games',
+    img: 'https://source.unsplash.com/user/willianjusten/300x143',
+    price: 'R$ 235,00',
+    promotionalPrice: 'R$ 215,00'
+  },
+  {
+    title: 'Population Zero',
+    developer: 'Rockstar Games',
+    img: 'https://source.unsplash.com/user/willianjusten/300x144',
+    price: 'R$ 235,00',
+    promotionalPrice: 'R$ 215,00'
+  },
+  {
+    title: 'Population Zero',
+    developer: 'Rockstar Games',
+    img: 'https://source.unsplash.com/user/willianjusten/300x145',
+    price: 'R$ 235,00',
+    promotionalPrice: 'R$ 215,00'
+  }
+]
 
 describe('<Home />', () => {
   it('should render menu and footer', () => {
