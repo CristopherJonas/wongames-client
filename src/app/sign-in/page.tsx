@@ -1,11 +1,12 @@
 'use client'
 
+import FormSignIn from '@/components/FormSignIn'
 import Auth from '@/templates/Auth'
 
 export default function Main() {
   return (
     <Auth title="Sign In">
-      <div>teste</div>
+      <FormSignIn />
     </Auth>
   )
 }

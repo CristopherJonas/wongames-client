@@ -2,6 +2,7 @@ module.exports = {
   testEnvironment: 'jsdom',
   testPathIgnorePatterns: ['/node_modules/', '/.next/'],
   collectCoverage: true,
+  prettierPath: null,
   collectCoverageFrom: [
     'src/**/*.ts(x)?',
     '!src/app/**',
