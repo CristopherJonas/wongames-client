@@ -2,7 +2,7 @@ import { renderWithTheme } from '@/utils/tests/helpers'
 import { screen } from '@testing-library/react'
 
 import GameCardSlider from '.'
-import items from './mockedItems'
+import items from './mock'
 
 describe('<GameSlider />', () => {
   it('should render with 4 active items', () => {

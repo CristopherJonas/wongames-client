@@ -1,4 +1,4 @@
-const items = [
+export default [
   {
     title: 'Population Zero',
     developer: 'Rockstar Games',
@@ -33,7 +33,12 @@ const items = [
     img: 'https://source.unsplash.com/user/willianjusten/300x144',
     price: 'R$ 235,00',
     promotionalPrice: 'R$ 215,00'
+  },
+  {
+    title: 'Population Zero',
+    developer: 'Rockstar Games',
+    img: 'https://source.unsplash.com/user/willianjusten/300x145',
+    price: 'R$ 235,00',
+    promotionalPrice: 'R$ 215,00'
   }
 ]
-
-export default items
