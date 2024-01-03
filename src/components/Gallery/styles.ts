@@ -39,7 +39,7 @@ export const Wrapper = styled.div`
 `
 
 type ModalProps = {
-  isOpen: boolean
+  $isOpen: boolean
 }
 
 const modalModifiers = {
@@ -54,7 +54,7 @@ const modalModifiers = {
 }
 
 export const Modal = styled.div<ModalProps>`
-  ${({ theme, isOpen }) => css`
+  ${({ theme, $isOpen }) => css`
     position: fixed;
     width: 100%;
     height: 100%;
@@ -66,8 +66,8 @@ export const Modal = styled.div<ModalProps>`
     align-items: center;
     z-index: ${theme.layers.modal};
     transition: opacity ${theme.transition.default};
-    ${isOpen && modalModifiers.open()}
-    ${!isOpen && modalModifiers.close()}
+    ${$isOpen && modalModifiers.open()}
+    ${!$isOpen && modalModifiers.close()}
   `}
 `
 export const Close = styled.div`

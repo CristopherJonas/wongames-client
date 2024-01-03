@@ -102,7 +102,6 @@ exports[`<FormSignUp /> should render the form 1`] = `
       >
         <div
           class="c3"
-          iconposition="left"
         >
           <svg
             aria-hidden="true"
@@ -122,7 +121,6 @@ exports[`<FormSignUp /> should render the form 1`] = `
         </div>
         <input
           class="c5"
-          iconposition="left"
           name="name"
           placeholder="Name"
           type="name"
@@ -138,7 +136,6 @@ exports[`<FormSignUp /> should render the form 1`] = `
       >
         <div
           class="c3"
-          iconposition="left"
         >
           <svg
             aria-hidden="true"
@@ -155,7 +152,6 @@ exports[`<FormSignUp /> should render the form 1`] = `
         </div>
         <input
           class="c5"
-          iconposition="left"
           name="email"
           placeholder="Email"
           type="email"
@@ -171,7 +167,6 @@ exports[`<FormSignUp /> should render the form 1`] = `
       >
         <div
           class="c3"
-          iconposition="left"
         >
           <svg
             aria-hidden="true"
@@ -188,7 +183,6 @@ exports[`<FormSignUp /> should render the form 1`] = `
         </div>
         <input
           class="c5"
-          iconposition="left"
           name="password"
           placeholder="Password"
           type="password"
@@ -204,7 +198,6 @@ exports[`<FormSignUp /> should render the form 1`] = `
       >
         <div
           class="c3"
-          iconposition="left"
         >
           <svg
             aria-hidden="true"
@@ -221,7 +214,6 @@ exports[`<FormSignUp /> should render the form 1`] = `
         </div>
         <input
           class="c5"
-          iconposition="left"
           name="confirm-password"
           placeholder="Confirm password"
           type="password"

@@ -77,7 +77,6 @@ exports[`<TextField /> Renders with error 1`] = `
   >
     <div
       class="c5 c6"
-      iconposition="left"
     >
       <svg
         aria-hidden="true"
@@ -95,7 +94,6 @@ exports[`<TextField /> Renders with error 1`] = `
     </div>
     <input
       class="c8"
-      iconposition="left"
       type="text"
       value=""
     />
