@@ -10,6 +10,7 @@ export type ButtonProps = {
   fullWidth?: boolean
   minimal?: boolean
   icon?: React.ReactNode
+  disabled?: boolean
   as?: React.ElementType
 } & ButtonTypes
 
@@ -20,6 +21,7 @@ const Button: React.ForwardRefRenderFunction<S.WrapperProps, ButtonProps> = (
     size = 'medium',
     minimal = false,
     fullWidth = false,
+    disabled = false,
     ...props
   },
   ref
@@ -29,6 +31,7 @@ const Button: React.ForwardRefRenderFunction<S.WrapperProps, ButtonProps> = (
     $fullWidth={fullWidth}
     $minimal={minimal}
     $hasIcon={!!icon}
+    $disabled={disabled}
     ref={ref}
     {...props}
   >
