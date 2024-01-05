@@ -59,7 +59,6 @@ exports[`<Radio /> should render with label (white) 1`] = `
   <label
     class="c2"
     for="check"
-    labelcolor="white"
   >
     Radio
   </label>

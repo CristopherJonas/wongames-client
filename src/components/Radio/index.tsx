@@ -34,7 +34,7 @@ const Radio = ({
         {...props}
       />
       {!!label && (
-        <S.Label labelColor={labelColor} htmlFor={labelFor}>
+        <S.Label $labelColor={labelColor} htmlFor={labelFor}>
           {label}
         </S.Label>
       )}
